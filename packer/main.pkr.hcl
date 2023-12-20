@@ -35,7 +35,7 @@ build {
 
   provisioner "shell" {
     script = "./setup.sh"
-    execute_command = "sudo {{.Path}}"
+    execute_command = "sudo bash {{.Path}}"
   }
 }
 
