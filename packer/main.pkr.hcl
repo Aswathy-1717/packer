@@ -12,7 +12,10 @@ source "amazon-ebs" "shopping" {
 }
 
 build {
-  source = ["source.amazon-ebs.shopping"]
+
+  sources = [
+    "source.amazon-ebs.shopping"
+  ]
 
   provisioner "file" {
     source      = "../website"
