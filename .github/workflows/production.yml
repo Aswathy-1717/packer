@@ -24,14 +24,14 @@ jobs:
           version: ${{ env.PRODUCT_VERSION }}
 
       - name: "packer init"
-        run: packer init
+        run: packer init .
         working-directory: ./packer/
 
       - name: "packer validate"
-        run: packer validate
+        run: packer validate .
         working-directory: ./packer/
 
       - name: "building image"
-        run: packer build
+        run: packer build .
         working-directory: ./packer/
 
