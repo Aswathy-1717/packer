@@ -14,14 +14,14 @@ source "amazon-ebs" "shopping" {
 build {
   sources = ["source.amazon-ebs.shopping"]
 
- 
   provisioner "file" {
     source      = "../website"
     destination = "/tmp/"
   }
 
-provisioner "shell" {
+  provisioner "shell" {
     script = "./setup.sh"
     execute_command = "sudo {{.Path}}"
   }
 }
+
