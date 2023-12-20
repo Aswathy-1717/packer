@@ -19,6 +19,5 @@ locals {
 
 variable "ami_id" {
   type        = string
-  description = "AMI ID of the instance"
   default     = "ami-0a0f1259dd1c90938"
 }
